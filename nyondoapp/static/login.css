@@ -1,0 +1,27 @@
+body{
+    background-color: lightgray;
+}
+.form-box{
+    max-width: 600px;
+    margin: 60px auto;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    background-color: #fff;
+    border-radius: 20px;
+}
+.form-control{
+    width: 50%;
+}
+.btn-primary{
+    margin-right: 50%;
+}
+p,h1{
+    text-align: center;
+}
+.logo{
+    display: block;
+    margin: 0 auto;
+}
+.logo-container{
+    text-align: center;
+}
