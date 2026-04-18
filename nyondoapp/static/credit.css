@@ -21,6 +21,11 @@ header h1{
     font-weight: bold;
     background-color: #fff;
 }
+footer{
+    text-align: center;
+    padding: 20px;
+    background-color:#fff;
+}
 .sidebar{
     display: block;
     justify-content: center;

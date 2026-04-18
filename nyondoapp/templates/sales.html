@@ -31,13 +31,16 @@
       <div class="row">
         <div class="col-4 bg-dark">
           <div class="sidebar">
-            <a href="#">Dashboard</a>
+            
+            <a href="{% url 'dashboardsales' %}">Dashboard</a>
             <a href="{% url 'sales' %}">Sales</a>
             <a href="{% url 'credit' %}">Credit Scheme</a>
+            <a href="{% url 'product' %}">Product</a>
+            <a href="{% url 'login' %}">Logout</a>
           </div>
         </div>
         <div class="col-8">
-          <form class="container form-box">
+          <form class=" form-box">
             <h1>Sales Entry Form</h1>
             <div class="row g-3">
               <h5>Basic Sales Information</h5>
@@ -106,14 +109,14 @@
                   aria-label="Small select example"
                 >
                   <option selected>select item category</option>
-                  <option value="1">Cement</option>
-                  <option value="2">Iron Bars</option>
-                  <option value="3">Nails</option>
-                  <option value="4">Iron sheets</option>
-                  <option value="4">Wheelbarrows</option>
-                  <option value="4">Wire Mesh</option>
-                  <option value="4">Barbed Wires</option>
-                  <option value="4">Tiles</option>
+                  <option value="1">Building Materials</option>
+                  <option value="2">Hand Tools</option>
+                  <option value="3">Plumbing Supplies</option>
+                  <option value="4">Fasteners</option>
+                  <option value="4">Construction Equipments</option>
+                  <option value="4">Power Tools</option>
+                  <option value="4">Safety Gear</option>
+                  <option value="4">Paint</option>
                 </select>
               </div>
               <div class="col">
@@ -193,6 +196,9 @@
         </div>
       </div>
     </div>
+    <footer>
+      <p>&copy .2026 Nyondo General Hardware LTD. All Rights Reserved</p>
+    </footer>
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
       integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"

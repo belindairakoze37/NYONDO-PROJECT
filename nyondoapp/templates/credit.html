@@ -20,9 +20,11 @@
       <div class="row">
         <div class="col-4 bg-dark">
           <div class="sidebar">
-            <a href="#">Dashboard</a>
+            <a href="{% url 'dashboardsales' %}">Dashboard</a>
             <a href="{% url 'sales' %}">Sales</a>
-            <a href="{% url 'credit'%}">Credit</a>
+            <a href="{% url 'credit' %}">Credit Scheme</a>
+            <a href="{% url 'product' %}">Product</a>
+            <a href="{% url 'login' %}">Logout</a>
           </div>
         </div>
         <div class="col-8">
@@ -83,7 +85,9 @@
         </div>
       </div>
     </div>
-
+    <footer>
+      <p>&copy .2026 Nyondo General Hardware LTD. All Rights Reserved</p>
+    </footer>
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
       integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"

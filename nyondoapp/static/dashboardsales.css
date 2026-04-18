@@ -1,0 +1,22 @@
+.container-fluid{
+    display: flex;
+}
+body{
+    background-color: #f4f6f9;
+}
+.col-8{
+    background-color: #fff;
+}
+.sidebar{
+    display: block;
+    justify-content: center;
+    height: 100vh;
+}
+.sidebar a{
+    display: block;
+    text-decoration: none;
+    margin-left: 20%;
+    padding: 15px;
+    font-weight: bold;
+    font-size: 20px;
+}

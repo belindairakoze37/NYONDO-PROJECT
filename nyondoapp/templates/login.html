@@ -14,15 +14,15 @@
             <p>Stock & Sales Management</p>
             <div class="logo-container"><img src="../static/images/logo.png" alt="logo" width="200"></div>
   <div class="mb-3">
-    <label for="exampleInputusername" class="form-label">Username</label>
+    <label for="exampleInputusername" class="form-label w-100">Username</label>
     <input type="text" class="form-control" id="exampleInputusername" aria-describedby="username" placeholder="Enter your username">
   </div>
   <div class="mb-3">
-    <label for="exampleInputPassword1" class="form-label">Password</label>
+    <label for="exampleInputPassword1" class="form-label w-100">Password</label>
     <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Enter your password">
   </div>
 <div class="d-grid gap-2 mx-auto">
-  <button class="btn btn-primary" type="button">Sign In</button>
+ <a href="{% url 'dashboardsales' %}"><button class="btn btn-primary" type="button">Sign In</button></a>
 </div>
 </form>
     </div>

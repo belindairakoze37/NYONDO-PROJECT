@@ -21,5 +21,10 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('sales/', views.sales, name='sales'),
     path('credit/',views.credit, name='credit'),
-    path('login/', views.login, name='login')
+    path('login/', views.login, name='login'),
+    path('dashboardsales/', views.dashboardsales, name='dashboardsales'),
+    path('index/' , views.index, name='index'),
+    path('product/', views.product, name='product'),
+    path('newproduct/', views.newproduct, name='newproduct'),
+    path('sales2/', views.sales2, name='sales2'),
 ]

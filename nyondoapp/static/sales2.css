@@ -1,0 +1,40 @@
+.bar-container{
+    display: flex;  
+}
+.bar-container .form-control{
+    margin-left: 60px;
+    margin-bottom: 40px;
+}
+.btn-outline-success{
+    height: 40px;
+}
+.form-control{
+    width: 50%;
+}
+.table-wrapper{
+    width: 90%;
+    border: 2px solid lightgray;
+    border-radius: 20px;
+    overflow: hidden;
+    margin: 30px;
+    margin: auto;
+}
+.card{
+    width: 75%;
+    margin: auto;
+    height: 200px;
+    border-radius: 20px;
+
+
+}
+.card-title{
+    text-align: center;
+    padding-top: 30px;
+    font-weight: 50px;
+}
+.card-text{
+    text-align: center;
+    font-weight: bold;
+
+}
+

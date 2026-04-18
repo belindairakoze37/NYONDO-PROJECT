@@ -1,5 +1,11 @@
+.container-fluid{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
 body{
-    background-color: lightgray;
+    background-color: #f4f6f9;
 }
 .form-box{
     max-width: 600px;
@@ -10,10 +16,13 @@ body{
     border-radius: 20px;
 }
 .form-control{
-    width: 50%;
+    width: 70%;
+    margin-left: 10%;
 }
 .btn-primary{
     margin-right: 50%;
+    width: 70%;
+    margin-left: 10%;
 }
 p,h1{
     text-align: center;
@@ -25,3 +34,10 @@ p,h1{
 .logo-container{
     text-align: center;
 }
+/* .input-section{
+    align-items: center;
+
+} */
+ .form-label{
+    margin-left: 10%;
+ }

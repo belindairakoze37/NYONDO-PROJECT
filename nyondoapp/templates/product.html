@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Product Page</title>
+    <script
+      src="https://kit.fontawesome.com/e3665fe03c.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../static/product.css" />
+  </head>
+
+  <body>
+  
+    <header>
+      <nav class="navbar">
+        <ul class="nav-links">
+          <li><a href="{% url 'dashboardsales' %}">Dashboard</a></li>
+          <li><a href="{% url 'sales' %}">Sales</a></li>
+          <li><a href="#">Inventory</a></li>
+          <li><a href="#">Customer</a></li>
+        </ul>
+
+        <a href="{% url 'newproduct' %}">
+          <div class="nav-action">
+            <button type="button" class="btn btn-primary btn-lg">
+              <i class="fa-solid fa-plus"></i> Add Product
+            </button>
+          </div>
+        </a>
+      </nav>
+    </header>
+
+    <div class="container-fluid">
+      <h1 style="margin-top: 25px; color: darkblue;">
+        Product Management
+      </h1>
+
+      <p
+        style="
+          margin-left: 15px;
+          font-weight: 400;
+          margin-bottom: 30px;
+        "
+      >
+        Manage your Hardware Inventory
+      </p>
+
+      <div class="row my-3 align-items-center">
+        <div class="col-md-3">
+          <select class="form-select form-select-sm">
+            <option selected>Category: All Products</option>
+            <option value="1">Building Materials</option>
+            <option value="2">Hand Tools</option>
+            <option value="3">Plumbing Supplies</option>
+            <option value="4">Fasteners</option>
+            <option value="5">Construction Equipments</option>
+            <option value="6">Power Tools</option>
+            <option value="7">Safety Gear</option>
+            <option value="8">Paint and Supplies</option>
+          </select>
+        </div>
+
+        <div class="col-md-3">
+          <select class="form-select form-select-sm">
+            <option selected>Stock Status: All</option>
+            <option value="1">In stock</option>
+            <option value="2">Out of Stock</option>
+            <option value="3">Low Stock</option>
+            <option value="4">OverStocked</option>
+            <option value="5">Backordered</option>
+          </select>
+        </div>
+
+        <div class="col-md-6">
+          <form class="d-flex">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search Products"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-success" type="submit">
+              Search
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <div class="table-responsive">
+        <table class="table mt-5">
+          <thead>
+            <tr>
+              <th>Image</th>
+              <th>Product Name</th>
+              <th>Category</th>
+              <th>Stock</th>
+              <th>Cost (UGX)</th>
+              <th>Price (UGX)</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr class="fixed-row">
+              <td class="align-middle py-3">
+                <img
+                  src="../static/images/cement.png"
+                  width="50"
+                  class="img-fluid"
+                  alt="cement"
+                />
+              </td>
+              <td class="align-middle py-3">Cement</td>
+              <td class="align-middle py-3">Building Materials</td>
+              <td class="align-middle py-3">120 in stock</td>
+              <td class="align-middle py-3">28,000</td>
+              <td class="align-middle py-3">35,000</td>
+              <td class="align-middle py-3">
+                <button class="btn btn-primary btn-sm me-2">Edit</button>
+                <button class="btn btn-secondary btn-sm">Delete</button>
+              </td>
+            </tr>
+
+            <tr class="fixed-row">
+              <td>
+                <img
+                  src="../static/images/hammer.png"
+                  width="50"
+                  class="img-fluid"
+                  alt="hammer"
+                />
+              </td>
+              <td class="align-middle py-3">Claw Hammer</td>
+              <td class="align-middle py-3">Hand Tools</td>
+              <td class="align-middle py-3">45 in stock</td>
+              <td class="align-middle py-3">12,000</td>
+              <td class="align-middle py-3">15,000</td>
+              <td class="align-middle py-3">
+                <button class="btn btn-primary btn-sm me-2">Edit</button>
+                <button class="btn btn-secondary btn-sm">Delete</button>
+              </td>
+            </tr>
+
+            <tr class="fixed-row">
+              <td>
+                <img
+                  src="../static/images/pipe.png"
+                  width="50"
+                  class="img-fluid"
+                  alt="pipe"
+                />
+              </td>
+              <td class="align-middle py-3">PVC Pipe(1 inch)</td>
+              <td class="align-middle py-3">Plumbing Supplies</td>
+              <td class="align-middle py-3">Low stock(5)</td>
+              <td class="align-middle py-3">18,000</td>
+              <td class="align-middle py-3">24,000</td>
+              <td class="align-middle py-3">
+                <button class="btn btn-primary btn-sm me-2">Edit</button>
+                <button class="btn btn-secondary btn-sm">Delete</button>
+              </td>
+            </tr>
+
+            <tr class="fixed-row">
+              <td>
+                <img
+                  src="../static/images/nails.png"
+                  width="50"
+                  class="img-fluid"
+                  alt="nails"
+                />
+              </td>
+              <td class="align-middle py-3">Steel Nails</td>
+              <td class="align-middle py-3">Fasteners</td>
+              <td class="align-middle py-3">200 in stock</td>
+              <td class="align-middle py-3">8,000</td>
+              <td class="align-middle py-3">12,000</td>
+              <td class="align-middle py-3">
+                <button class="btn btn-primary btn-sm me-2">Edit</button>
+                <button class="btn btn-secondary btn-sm">Delete</button>
+              </td>
+            </tr>
+
+            <tr class="fixed-row">
+              <td>
+                <img
+                  src="../static/images/wheelbarrow.png"
+                  width="50"
+                  class="img-fluid"
+                  alt="wheelbarrow"
+                />
+              </td>
+              <td class="align-middle py-3">Wheelbarrow</td>
+              <td class="align-middle py-3">Construction Equipment</td>
+              <td class="align-middle py-3">Out of stock</td>
+              <td class="align-middle py-3">90,000</td>
+              <td class="align-middle py-3">120,000</td>
+              <td class="align-middle py-3">
+                <button class="btn btn-primary btn-sm me-2">Edit</button>
+                <button class="btn btn-secondary btn-sm">Delete</button>
+              </td>
+            </tr>
+
+            <tr class="fixed-row">
+              <td>
+                <img
+                  src="../static/images/drill.png"
+                  width="50"
+                  class="img-fluid"
+                  alt="drill"
+                />
+              </td>
+              <td class="align-middle py-3">Electric Drill</td>
+              <td class="align-middle py-3">Power Tools</td>
+              <td class="align-middle py-3">30 in stock</td>
+              <td class="align-middle py-3">75,000</td>
+              <td class="align-middle py-3">85,000</td>
+              <td class="align-middle py-3">
+                <button class="btn btn-primary btn-sm me-2">Edit</button>
+                <button class="btn btn-secondary btn-sm">Delete</button>
+              </td>
+            </tr>
+
+            <tr class="fixed-row">
+              <td>
+                <img
+                  src="../static/images/bucket.png"
+                  width="50"
+                  class="img-fluid"
+                  alt="bucket"
+                />
+              </td>
+              <td class="align-middle py-3">Paint(20liters)</td>
+              <td class="align-middle py-3">Paint and Supplies</td>
+              <td class="align-middle py-3">75 in stock</td>
+              <td class="align-middle py-3">70,000</td>
+              <td class="align-middle py-3">90,000</td>
+              <td class="align-middle py-3">
+                <button class="btn btn-primary btn-sm me-2">Edit</button>
+                <button class="btn btn-secondary btn-sm">Delete</button>
+              </td>
+            </tr>
+
+            <tr class="fixed-row">
+              <td>
+                <img
+                  src="../static/images/gloves.png"
+                  width="50"
+                  class="img-fluid"
+                  alt="gloves"
+                />
+              </td>
+              <td class="align-middle py-3">Safety Gloves</td>
+              <td class="align-middle py-3">Safety Gear</td>
+              <td class="align-middle py-3">150 in stock</td>
+              <td class="align-middle py-3">6,000</td>
+              <td class="align-middle py-3">8,000</td>
+              <td class="align-middle py-3">
+                <button class="btn btn-primary btn-sm me-2">Edit</button>
+                <button class="btn btn-secondary btn-sm">Delete</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
